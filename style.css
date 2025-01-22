@@ -1,0 +1,405 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.title {
+  color: #fcfcfc;
+  font-size:10em;
+  text-align: center;
+  justify-content:center;
+  position: relative;
+  z-index: 2;
+  text-shadow: -3px 8px #030303;
+}
+
+.split-screen {
+  position: absolute;
+  top: 197em; /*adjust as needed (controles the height of the split screen*/
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 15em); /* adjust height of the split screen*/
+  z-index: -1;
+  display: flex;
+}
+
+.video-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  padding: 20px;
+  position:relative;
+  left: 0%;
+  margin-top:4em;
+  width: 90%;
+  height: 60%;
+}
+
+.player-container {
+  flex: 1;
+  position: relative;
+}
+
+#toggleCamera {                    /*changes the toggle camera button*/
+  padding: 15px;
+  background-color: #1c5833;
+  color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  border-radius: 10px;
+  position:relative;
+  transform: translate(-25%, 425%);
+  z-index:5;
+}
+
+#localVideo {             /* changes the actual green frame part*/
+  width: 290%;
+  height: 100%;
+  max-height: 500x;
+  border: 10px solid #085038;
+  transform: translate(-4%, 0%);
+  position: absolute;
+  z-index:-1;
+}
+
+
+
+iframe {
+  border: none;
+  padding:1em;
+}
+
+.spotify-embed{
+  transform: translate(40%, -24%);
+  width:600px;
+  height:300px;
+  z-index:0;
+}
+
+:root {
+  font-size: 62.4%;
+  --color-primary: #1e1e20;
+  --color-secondary: #1c5833;
+  --color-font: #ffffffe6;
+
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+i,
+h1 {
+  color: var(--color-font);
+}
+
+i {
+  font-size: 3.2rem;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.container1 {
+  width: min(42.5rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
+/*to do list*/
+.list {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28em;
+  position: relative;
+  z-index: 0;
+  font-size: 12px;
+  transform: translate(0%, 150%);
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 540px;
+  background: #ffff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-list h2 {
+  color: #085038;
+  display: flex;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #085038;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/navigation-and-settings/24/Material_icons-01-26-512.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/2048px-Eo_circle_green_checkmark.svg.png);
+  background-position: relative;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
+
+
+.background-sec{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.background-sec video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.facetime-bg{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: calc(920px - 5em); /*adjust hiehgt of the split screen*/
+  top: 220em; /*adjust to move the split screen lower*/
+  left: 9.9px;
+  z-index:0;
+}
+
+.facetime-bg img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Pomodoro Timer styles */
+.pomodoro-page {
+  height: 260px;
+  width:600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(8,80,56,1);
+  border-radius: 50px;
+  transform: translate(0%, 320%);
+}
+
+.timer-container {
+  text-align: center;
+}
+
+.timer {
+  font-size: 8rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding:20px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  color:#085038;
+  font-size:16px;
+  font-weight:bold;
+}
+
+
+/*hero image*/
+.hero-image{
+  background-image: linear-gradient(rgba(0,0,0,0.5));
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text{
+  text-align:center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  padding:50em;
+}
+
+.container h2{
+  text-align: center;
+  color: #085038;
+  font-size: 3em;
+  position: absolute;
+  transform: translate(0%, 220%);
+  background-color:#ffffff;
+  border-radius:40px;
+  padding:80px;
+}
+
+/*multiple youtube study with me videos*/
+#video-player {
+  width: 580px;
+  height: 300px;
+  background-color: #000;
+  transform: translate(43%, 5%);
+  cursor:auto;
+  z-index:-1;
+}
+
+.video-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  transform: translate(40%, 390%);
+  position:relative;
+  Z-index:5;
+}
+
+.video-buttons button {
+  margin: 0 5px;
+}
+
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(231, 230, 228); }
+}
